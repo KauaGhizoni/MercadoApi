@@ -1,69 +1,53 @@
-.pagination-buttons {
+/* Contêiner da navegação */
+.carousel-pagination {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    gap: 15px;
-}
-
-.pagination-buttons .btn {
-    background: linear-gradient(135deg, #f1f1f1 0%, #e0e0e0 100%);
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 12px 24px;
-    margin: 0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.pagination-buttons .btn:hover {
-    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.pagination-buttons .btn:disabled {
-    background-color: #e0e0e0;
-    color: #999;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-.carousel-item .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.carousel-item .col-4 {
-    flex: 1 0 30%;
-    max-width: 30%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.carousel-item .col-4:hover {
-    transform: scale(1.05);
-}
-
-.carousel-inner {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 15px; /* Espaçamento entre os botões */
+    padding: 20px;
+    background-color: #1c1c1c; /* Fundo escuro para contraste */
+    border-top: 2px solid #f1c40f; /* Linha dourada no topo */
+}
+
+/* Botões da página */
+.carousel-pagination .page-btn {
+    display: inline-flex;
     justify-content: center;
-    padding: 20px 0;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1c1c1c; /* Texto preto para contraste */
+    background: linear-gradient(135deg, #f39c12, #f1c40f); /* Gradiente de amarelo */
+    border: none; /* Sem bordas */
+    border-radius: 50%; /* Botões circulares */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.col-4 {
-    margin: 20px;
+/* Botão ativo */
+.carousel-pagination .page-btn.active {
+    background: linear-gradient(135deg, #f1c40f, #f39c12); /* Gradiente invertido no botão ativo */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+    transform: scale(1.1); /* Botão ativo fica maior */
+    color: #ffffff; /* Texto branco para maior contraste */
 }
 
-.card-spacing {
-    margin: 20px;
+/* Efeito hover */
+.carousel-pagination .page-btn:hover {
+    background: linear-gradient(135deg, #f1c40f, #f7dc6f); /* Gradiente mais claro no hover */
+    transform: translateY(-4px); /* Eleva o botão */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
+
+/* Botões menores em telas pequenas */
+@media (max-width: 768px) {
+    .carousel-pagination .page-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.875rem;
+    }
+}
+git 
